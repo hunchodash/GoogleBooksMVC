@@ -23,3 +23,17 @@ Requisiti:
 - Connessione Internet per interrogare le API
 - Docker (per esecuzione containerizzata)
 
+## 🐳 Esecuzione con Docker
+
+Puoi eseguire l'app direttamente tramite Docker seguendo questi passaggi:
+
+1. Costruisci l'immagine Docker:
+   ```bash
+   docker build -t googlebooks .
+2. Avvia il container:
+   ```bash
+   docker run -d -p 8080:80 --name googlebooks-container googlebooks
+3. Apri il browser e vai all'indirizzo: http://localhost:8080
+
+   
+
