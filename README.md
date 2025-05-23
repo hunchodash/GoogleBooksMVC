@@ -16,8 +16,10 @@ Tecnologie usate:
 - C#
 - Bootstrap 5 + Bootstrap Icons
 - API REST (Google Books)
+- Docker (esecuzione containerizzata)
 
 Requisiti:
 - .NET 8 SDK
 - Connessione Internet per interrogare le API
+- Docker (per esecuzione containerizzata)
 
