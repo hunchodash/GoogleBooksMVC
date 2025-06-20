@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.DataProtection;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Configurazione servizi
+
 builder.Services.AddControllersWithViews();
 builder.Services.AddHttpClient<GoogleBooksService>(client =>
 {
@@ -11,17 +11,16 @@ builder.Services.AddHttpClient<GoogleBooksService>(client =>
     client.DefaultRequestHeaders.Add("Accept", "application/json");
 });
 
-// Persistenza chiavi DataProtection
+
 builder.Services.AddDataProtection()
     .SetApplicationName("GoogleBooksMVC")
     .PersistKeysToFileSystem(new DirectoryInfo(Path.Combine(AppContext.BaseDirectory, "keys")));
 
-// Usa la porta 80 nel container
 builder.WebHost.UseUrls("http://*:80");
 
 var app = builder.Build();
 
-// Pipeline
+
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");

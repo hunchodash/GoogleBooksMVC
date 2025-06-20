@@ -30,7 +30,7 @@ namespace GoogleBooksMVC.Services
         }
     }
 
-    // Classi di supporto per la deserializzazione JSON
+
     public class GoogleBooksApiResponse
     {
         public int TotalItems { get; set; }
